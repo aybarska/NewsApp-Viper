@@ -1,0 +1,6 @@
+framework module Pods_NewsApp_Viper {
+  umbrella header "Pods-NewsApp-Viper-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -20,9 +20,12 @@
 		98072FF8290EFBEA009BC59C /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98072FF3290EFBEA009BC59C /* HomeInteractor.swift */; };
 		98072FFC290F0575009BC59C /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98072FFA290F0575009BC59C /* NewsCollectionViewCell.swift */; };
 		98072FFD290F0575009BC59C /* NewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98072FFB290F0575009BC59C /* NewsCollectionViewCell.xib */; };
+		A3F14B65374DD8F61B93D93E /* Pods_NewsApp_Viper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C9FE64FF1288C1409F0BE74 /* Pods_NewsApp_Viper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C9FE64FF1288C1409F0BE74 /* Pods_NewsApp_Viper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsApp_Viper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AAEBCFCCA5590A8206271A /* Pods-NewsApp-Viper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp-Viper.release.xcconfig"; path = "Target Support Files/Pods-NewsApp-Viper/Pods-NewsApp-Viper.release.xcconfig"; sourceTree = "<group>"; };
 		98072FD3290EF832009BC59C /* NewsApp-Viper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NewsApp-Viper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98072FD6290EF832009BC59C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98072FD8290EF832009BC59C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		98072FF3290EFBEA009BC59C /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		98072FFA290F0575009BC59C /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		98072FFB290F0575009BC59C /* NewsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCollectionViewCell.xib; sourceTree = "<group>"; };
+		EAC91937940265EEC7162FDF /* Pods-NewsApp-Viper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp-Viper.debug.xcconfig"; path = "Target Support Files/Pods-NewsApp-Viper/Pods-NewsApp-Viper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +49,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F14B65374DD8F61B93D93E /* Pods_NewsApp_Viper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BBF030A924995D0D5379AFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C9FE64FF1288C1409F0BE74 /* Pods_NewsApp_Viper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		98072FCA290EF831009BC59C = {
 			isa = PBXGroup;
 			children = (
 				98072FD5290EF832009BC59C /* NewsApp-Viper */,
 				98072FD4290EF832009BC59C /* Products */,
+				DA12F73E819AC64A00997F3C /* Pods */,
+				3BBF030A924995D0D5379AFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +127,16 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		DA12F73E819AC64A00997F3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EAC91937940265EEC7162FDF /* Pods-NewsApp-Viper.debug.xcconfig */,
+				81AAEBCFCCA5590A8206271A /* Pods-NewsApp-Viper.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +144,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98072FEA290EF836009BC59C /* Build configuration list for PBXNativeTarget "NewsApp-Viper" */;
 			buildPhases = (
+				CC5434157518450BD6C03F2D /* [CP] Check Pods Manifest.lock */,
 				98072FCF290EF832009BC59C /* Sources */,
 				98072FD0290EF832009BC59C /* Frameworks */,
 				98072FD1290EF832009BC59C /* Resources */,
+				9B7555CB2B75837F0CE345F1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,6 +205,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B7555CB2B75837F0CE345F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewsApp-Viper/Pods-NewsApp-Viper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewsApp-Viper/Pods-NewsApp-Viper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NewsApp-Viper/Pods-NewsApp-Viper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC5434157518450BD6C03F2D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NewsApp-Viper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		98072FCF290EF832009BC59C /* Sources */ = {
@@ -334,6 +403,7 @@
 		};
 		98072FEB290EF836009BC59C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAC91937940265EEC7162FDF /* Pods-NewsApp-Viper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -362,6 +432,7 @@
 		};
 		98072FEC290EF836009BC59C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81AAEBCFCCA5590A8206271A /* Pods-NewsApp-Viper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

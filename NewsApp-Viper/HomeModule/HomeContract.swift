@@ -37,7 +37,7 @@ protocol ViewToPresenterHomeProtocol {
 protocol PresenterToInteractorHomeProtocol {
     
     var presenter: InteractorToPresenterHomeProtocol? { get set }
-    var news: [News] { get }
+    //var news: [News] { get }
     func getApiData()
     
     
@@ -46,7 +46,7 @@ protocol PresenterToInteractorHomeProtocol {
 
 // MARK: Interactor Output (Interactor -> Presenter)
 protocol InteractorToPresenterHomeProtocol {
-    
+    func sendDataToPresenter(newsList:[NewsCellViewModel])
 }
 
 
