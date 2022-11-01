@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -66,6 +67,9 @@ extension HomeViewController: PresenterToViewHomeProtocol{
     
     func updateUI(with items: [NewsCellViewModel]) {
         self.items = items
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
     }
     
 
@@ -94,8 +98,9 @@ extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewsCollectionViewCell.identifier, for: indexPath) as! NewsCollectionViewCell
-//        let new = news[indexPath.row]
-//        cell.configure(image: UIImage(named: new.image)!, title: new.title,isReaded: new.isReaded)
+         let newsItem = items[indexPath.row]
+        // AYB get the image with SDWebImage
+        cell.configure(image: newsItem.imageUrl!, title: newsItem.title ?? "News Title")
         return cell
     }
 }

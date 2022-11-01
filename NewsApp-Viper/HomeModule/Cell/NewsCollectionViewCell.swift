@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 
 class NewsCollectionViewCell: UICollectionViewCell {
     
@@ -32,9 +32,10 @@ class NewsCollectionViewCell: UICollectionViewCell {
         return UINib(nibName: identifier, bundle: nil)
     }
     
-    public func configure(image: UIImage,title: String, isReaded: Bool) {
+    public func configure(image: String,title: String) {
         titleLabel.text = title
-        imageView.image = image
+        //imageView.image = image
+        imageView.sd_setImage(with: URL(string: image), placeholderImage: UIImage(named: "noResult"))
     }
                 
     

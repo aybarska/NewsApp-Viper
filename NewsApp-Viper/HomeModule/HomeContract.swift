@@ -65,16 +65,14 @@ struct NewsCellViewModel {
 // MARK: - News
 struct News: Decodable {
     let status: String
-    let totalResults: Int
     let articles: [Article]
 }
 
 // MARK: - Article
 struct Article: Decodable {
-    let author, title, articleDescription: String
+    let author, title: String
     let url: String
     let urlToImage: String
-    let publishedAt: Date
     let content: String
 }
 

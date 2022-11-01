@@ -40,7 +40,9 @@ class HomePresenter: ViewToPresenterHomeProtocol {
 
 extension HomePresenter: InteractorToPresenterHomeProtocol {
     func sendDataToPresenter(newsList: [NewsCellViewModel]) {
-        <#code#>
+        print("presenter again")
+        
+        self.view?.updateUI(with: newsList)
     }
     
     

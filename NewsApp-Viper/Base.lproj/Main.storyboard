@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YIS-Fx-jlQ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="5" y="44" width="404" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aYR-QB-ngg">
                                     <size key="itemSize" width="128" height="128"/>
@@ -31,10 +31,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="YIS-Fx-jlQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="19S-iP-AQU"/>
+                            <constraint firstItem="YIS-Fx-jlQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="19S-iP-AQU"/>
                             <constraint firstItem="YIS-Fx-jlQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9Qn-ni-9EE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YIS-Fx-jlQ" secondAttribute="bottom" id="fNt-wl-xau"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YIS-Fx-jlQ" secondAttribute="trailing" id="kOe-lQ-hcy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YIS-Fx-jlQ" secondAttribute="trailing" constant="5" id="kOe-lQ-hcy"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="lIR-PD-gef"/>
@@ -68,6 +68,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bc3-xk-llD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U0u-yq-l4j">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
