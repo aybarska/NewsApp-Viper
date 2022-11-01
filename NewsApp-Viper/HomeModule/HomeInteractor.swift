@@ -12,6 +12,7 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
     // MARK: Properties
     var presenter: InteractorToPresenterHomeProtocol?
     var news: [News] = []
+    var newsCell: [NewsCellViewModel] = []
     
     func getApiData() {
         //

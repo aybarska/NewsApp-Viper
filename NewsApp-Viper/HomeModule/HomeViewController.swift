@@ -14,15 +14,20 @@ class HomeViewController: UIViewController {
     private var items: [NewsCellViewModel] = []
     
     // MARK: - Properties
-     var presenter: ViewToPresenterHomeProtocol?
+    var HomePresenter: ViewToPresenterHomeProtocol?
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("load")
-        presenter?.didViewLoad()
+        HomeRouter.execModule(ref: self)
+        
         makeUI()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("load")
+        HomePresenter?.didViewLoad()
+     }
     
     func makeUI() {
         let layout = UICollectionViewFlowLayout()
@@ -60,7 +65,7 @@ extension HomeViewController: PresenterToViewHomeProtocol{
     }
     
     func updateUI(with items: [NewsCellViewModel]) {
-        //
+        self.items = items
     }
     
 

@@ -19,7 +19,8 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     func didViewLoad() {
         //
         print("presenter didload")
-        view?.showAlert(with: "Presenter didviewload :)")
+        //view?.showAlert(with: "Presenter didviewload :)")
+        interactor?.getApiData()
     }
     
     func didItemPressed(at index: IndexPath) {
@@ -28,6 +29,7 @@ class HomePresenter: ViewToPresenterHomeProtocol {
     
     func didApiDataFetch() {
         //
+        //view?.updateUI(with: interactor.newsCell)
     }
     
     func didApiDataCouldntFetch() {
