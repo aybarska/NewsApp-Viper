@@ -43,6 +43,6 @@ private extension HomeInteractor {
 //            return hotel.result.map { .init(hotelNameTrans: $0.hotel_name, address: $0.address, mainPhotoURL: $0.mainPhotoURL) }
 //        }
 //        return []
-        return news.map { .init(title: $0.title, imageUrl:$0.urlToImage) }
+        return news.map { .init(title: $0.title, imageUrl: $0.urlToImage, content: $0.content) }
     }
 }

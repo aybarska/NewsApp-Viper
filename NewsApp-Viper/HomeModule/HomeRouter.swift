@@ -12,22 +12,6 @@ import UIKit
 class HomeRouter: PresenterToRouterHomeProtocol {
     
     
-    // MARK: Static methods
-//    static func createModule() -> UIViewController {
-//
-//        let viewController = HomeViewController()
-//
-//        let presenter: ViewToPresenterHomeProtocol & InteractorToPresenterHomeProtocol = HomePresenter()
-//
-//        viewController.HomePresenter = presenter
-//        viewController.HomePresenter?.router = HomeRouter()
-//        viewController.HomePresenter?.view = viewController
-//        viewController.HomePresenter?.interactor = HomeInteractor()
-//        viewController.HomePresenter?.interactor?.presenter = presenter
-//
-//        return viewController
-//    }
-    
    
         static func execModule(ref: HomeViewController) {
             let presenter = HomePresenter()
@@ -38,11 +22,14 @@ class HomeRouter: PresenterToRouterHomeProtocol {
             ref.HomePresenter?.view = ref
             //Interactor
             ref.HomePresenter?.interactor?.presenter = presenter
+            //Router
+            ref.HomePresenter?.router = HomeRouter()
         }
     
 
     
-    func navigateToDetail(with news: News) {
-        //
+    func navigateToDetail(with news: NewsCellViewModel) {
+        DetailViewController().item = news
     }
+    
 }

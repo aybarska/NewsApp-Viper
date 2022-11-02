@@ -43,6 +43,7 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: PresenterToViewHomeProtocol{
+    
     func showLoading() {
         //
     }
@@ -82,10 +83,11 @@ extension HomeViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-
-        //detailsVC?.selectedNewsData = new
-        //detailsVC?.title = new.title
-        //self.navigationController?.pushViewController(detailsVC!, animated: true)
+        let data = items[indexPath.row]
+        HomePresenter?.didItemPressed(data: data)
+        let detailsVC = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
+        detailsVC?.item = data
+        self.navigationController?.pushViewController(detailsVC!, animated: true)
         }
     
 }
@@ -99,7 +101,6 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewsCollectionViewCell.identifier, for: indexPath) as! NewsCollectionViewCell
          let newsItem = items[indexPath.row]
-        // AYB get the image with SDWebImage
         cell.configure(image: newsItem.imageUrl!, title: newsItem.title ?? "News Title")
         return cell
     }

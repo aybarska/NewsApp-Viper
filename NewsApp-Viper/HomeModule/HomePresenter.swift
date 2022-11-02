@@ -10,38 +10,26 @@ import Foundation
 
 class HomePresenter: ViewToPresenterHomeProtocol {
 
-    
     // MARK: Properties
     var view: PresenterToViewHomeProtocol?
     var interactor: PresenterToInteractorHomeProtocol?
     var router: PresenterToRouterHomeProtocol?
     
     func didViewLoad() {
-        //
-        print("presenter didload")
         //view?.showAlert(with: "Presenter didviewload :)")
         interactor?.getApiData()
     }
     
-    func didItemPressed(at index: IndexPath) {
-        //
-    }
-    
-    func didApiDataFetch() {
-        //
-        //view?.updateUI(with: interactor.newsCell)
-    }
-    
-    func didApiDataCouldntFetch() {
-        //
+    func didItemPressed(data: NewsCellViewModel) {
+        //AYB make the details module(inside navigation controller). make the router push the vc.
+        print("P to R")
+        router?.navigateToDetail(with: data)
     }
     
 }
 
 extension HomePresenter: InteractorToPresenterHomeProtocol {
     func sendDataToPresenter(newsList: [NewsCellViewModel]) {
-        print("presenter again")
-        
         self.view?.updateUI(with: newsList)
     }
     

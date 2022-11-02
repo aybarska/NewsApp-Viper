@@ -34,7 +34,6 @@ class NewsCollectionViewCell: UICollectionViewCell {
     
     public func configure(image: String,title: String) {
         titleLabel.text = title
-        //imageView.image = image
         imageView.sd_setImage(with: URL(string: image), placeholderImage: UIImage(named: "noResult"))
     }
                 

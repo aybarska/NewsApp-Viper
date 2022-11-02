@@ -26,10 +26,8 @@ protocol ViewToPresenterHomeProtocol {
     var router: PresenterToRouterHomeProtocol? { get set }
     
     func didViewLoad()
-    func didItemPressed(at index: IndexPath)
+    func didItemPressed(data: NewsCellViewModel)
     
-    func didApiDataFetch()
-    func didApiDataCouldntFetch()
 }
 
 
@@ -52,7 +50,7 @@ protocol InteractorToPresenterHomeProtocol {
 
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterHomeProtocol {
-    func navigateToDetail(with news: News)
+    func navigateToDetail(with news: NewsCellViewModel)
     
 }
 
@@ -60,6 +58,7 @@ protocol PresenterToRouterHomeProtocol {
 struct NewsCellViewModel {
     var title: String?
     var imageUrl: String?
+    var content: String?
 }
 
 // MARK: - News
