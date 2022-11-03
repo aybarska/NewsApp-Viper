@@ -21,6 +21,13 @@
 		98072FFC290F0575009BC59C /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98072FFA290F0575009BC59C /* NewsCollectionViewCell.swift */; };
 		98072FFD290F0575009BC59C /* NewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98072FFB290F0575009BC59C /* NewsCollectionViewCell.xib */; };
 		9837E7112912980900449C11 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9837E7102912980900449C11 /* CoreDataManager.swift */; };
+		986DF74F291356CB007021F4 /* BookmarksContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DF74A291356CB007021F4 /* BookmarksContract.swift */; };
+		986DF750291356CB007021F4 /* BookmarksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DF74B291356CB007021F4 /* BookmarksPresenter.swift */; };
+		986DF751291356CB007021F4 /* BookmarksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DF74C291356CB007021F4 /* BookmarksRouter.swift */; };
+		986DF752291356CB007021F4 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DF74D291356CB007021F4 /* BookmarksViewController.swift */; };
+		986DF753291356CB007021F4 /* BookmarksInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DF74E291356CB007021F4 /* BookmarksInteractor.swift */; };
+		9883894C2913D26F005839A4 /* BookmarksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9883894A2913D26F005839A4 /* BookmarksCollectionViewCell.swift */; };
+		9883894D2913D26F005839A4 /* BookmarksCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9883894B2913D26F005839A4 /* BookmarksCollectionViewCell.xib */; };
 		9895173B2911D38700950E71 /* DetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989517362911D38700950E71 /* DetailContract.swift */; };
 		9895173C2911D38700950E71 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989517372911D38700950E71 /* DetailPresenter.swift */; };
 		9895173D2911D38700950E71 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989517382911D38700950E71 /* DetailRouter.swift */; };
@@ -48,6 +55,13 @@
 		98072FFA290F0575009BC59C /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		98072FFB290F0575009BC59C /* NewsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCollectionViewCell.xib; sourceTree = "<group>"; };
 		9837E7102912980900449C11 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		986DF74A291356CB007021F4 /* BookmarksContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksContract.swift; sourceTree = "<group>"; };
+		986DF74B291356CB007021F4 /* BookmarksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksPresenter.swift; sourceTree = "<group>"; };
+		986DF74C291356CB007021F4 /* BookmarksRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksRouter.swift; sourceTree = "<group>"; };
+		986DF74D291356CB007021F4 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		986DF74E291356CB007021F4 /* BookmarksInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksInteractor.swift; sourceTree = "<group>"; };
+		9883894A2913D26F005839A4 /* BookmarksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksCollectionViewCell.swift; sourceTree = "<group>"; };
+		9883894B2913D26F005839A4 /* BookmarksCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarksCollectionViewCell.xib; sourceTree = "<group>"; };
 		989517362911D38700950E71 /* DetailContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContract.swift; sourceTree = "<group>"; };
 		989517372911D38700950E71 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		989517382911D38700950E71 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
@@ -97,6 +111,7 @@
 		98072FD5290EF832009BC59C /* NewsApp-Viper */ = {
 			isa = PBXGroup;
 			children = (
+				986DF74929135667007021F4 /* BookmarksModule */,
 				989517352911D36B00950E71 /* DetailModule */,
 				98072FEE290EFBCE009BC59C /* HomeModule */,
 				98072FED290EFB6A009BC59C /* App */,
@@ -137,6 +152,28 @@
 			children = (
 				98072FFA290F0575009BC59C /* NewsCollectionViewCell.swift */,
 				98072FFB290F0575009BC59C /* NewsCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		986DF74929135667007021F4 /* BookmarksModule */ = {
+			isa = PBXGroup;
+			children = (
+				988389492913D253005839A4 /* Cell */,
+				986DF74A291356CB007021F4 /* BookmarksContract.swift */,
+				986DF74B291356CB007021F4 /* BookmarksPresenter.swift */,
+				986DF74C291356CB007021F4 /* BookmarksRouter.swift */,
+				986DF74D291356CB007021F4 /* BookmarksViewController.swift */,
+				986DF74E291356CB007021F4 /* BookmarksInteractor.swift */,
+			);
+			path = BookmarksModule;
+			sourceTree = "<group>";
+		};
+		988389492913D253005839A4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9883894A2913D26F005839A4 /* BookmarksCollectionViewCell.swift */,
+				9883894B2913D26F005839A4 /* BookmarksCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -225,6 +262,7 @@
 				98072FE6290EF836009BC59C /* LaunchScreen.storyboard in Resources */,
 				98072FE3290EF836009BC59C /* Assets.xcassets in Resources */,
 				98072FDE290EF832009BC59C /* Main.storyboard in Resources */,
+				9883894D2913D26F005839A4 /* BookmarksCollectionViewCell.xib in Resources */,
 				98072FFD290F0575009BC59C /* NewsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,18 +317,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				9895173E2911D38700950E71 /* DetailViewController.swift in Sources */,
+				986DF750291356CB007021F4 /* BookmarksPresenter.swift in Sources */,
+				986DF751291356CB007021F4 /* BookmarksRouter.swift in Sources */,
 				9895173B2911D38700950E71 /* DetailContract.swift in Sources */,
 				98072FE1290EF832009BC59C /* NewsApp_Viper.xcdatamodeld in Sources */,
 				9837E7112912980900449C11 /* CoreDataManager.swift in Sources */,
 				98072FF6290EFBEA009BC59C /* HomeRouter.swift in Sources */,
 				98072FF7290EFBEA009BC59C /* HomeViewController.swift in Sources */,
+				986DF752291356CB007021F4 /* BookmarksViewController.swift in Sources */,
 				9895173C2911D38700950E71 /* DetailPresenter.swift in Sources */,
 				98072FF4290EFBEA009BC59C /* HomeContract.swift in Sources */,
 				98072FF5290EFBEA009BC59C /* HomePresenter.swift in Sources */,
+				986DF753291356CB007021F4 /* BookmarksInteractor.swift in Sources */,
+				986DF74F291356CB007021F4 /* BookmarksContract.swift in Sources */,
 				98072FF8290EFBEA009BC59C /* HomeInteractor.swift in Sources */,
 				98072FD7290EF832009BC59C /* AppDelegate.swift in Sources */,
 				9895173D2911D38700950E71 /* DetailRouter.swift in Sources */,
 				9895173F2911D38700950E71 /* DetailInteractor.swift in Sources */,
+				9883894C2913D26F005839A4 /* BookmarksCollectionViewCell.swift in Sources */,
 				98072FFC290F0575009BC59C /* NewsCollectionViewCell.swift in Sources */,
 				98072FD9290EF832009BC59C /* SceneDelegate.swift in Sources */,
 			);
