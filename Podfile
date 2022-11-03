@@ -8,5 +8,7 @@ target 'NewsApp-Viper' do
   # Pods for NewsApp-Viper
     pod 'Alamofire'
     pod 'SDWebImage'
+    pod 'Firebase/Core'
+    pod 'Firebase/Crashlytics'
 
 end

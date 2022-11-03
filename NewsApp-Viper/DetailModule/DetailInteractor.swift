@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import FirebaseAnalytics
 
 class DetailInteractor: PresenterToInteractorDetailProtocol {
     var bookmark = [Bookmarks]()
@@ -18,8 +19,12 @@ class DetailInteractor: PresenterToInteractorDetailProtocol {
     func addBookmark(data: NewsCellViewModel) {
         CoreDataManager.shared.saveBookmark(title: data.title!, imageUrl: data.imageUrl!, content: data.content!)
         self.bookmark = CoreDataManager.shared.getAllBookmarks()
-        //print(data)
-        //print(bookmark)
+        //SEND firebase analytics
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+          AnalyticsParameterItemName: data.title!,
+          //AnalyticsParameterContentType: data.content!,
+        ])
+        
     }
     
     func deleteBookmark(data: Bookmarks) {

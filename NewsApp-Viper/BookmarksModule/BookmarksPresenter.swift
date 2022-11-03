@@ -16,7 +16,6 @@ class BookmarksPresenter: ViewToPresenterBookmarksProtocol {
     var router: PresenterToRouterBookmarksProtocol?
     
     func didViewLoad() {
-        print("b presenter")
         interactor?.getCoreData()
     }
     

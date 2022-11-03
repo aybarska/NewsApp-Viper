@@ -37,12 +37,6 @@ class HomeInteractor: PresenterToInteractorHomeProtocol {
 private extension HomeInteractor {
     @discardableResult
     func makeViewBasedModel(_ news: [Article]) -> [NewsCellViewModel] {
-        //make data usabe for view
-        //AYB Check this map function
-//        if let hotel = hotels.first {
-//            return hotel.result.map { .init(hotelNameTrans: $0.hotel_name, address: $0.address, mainPhotoURL: $0.mainPhotoURL) }
-//        }
-//        return []
         return news.map { .init(title: $0.title, imageUrl: $0.urlToImage, content: $0.content) }
     }
 }

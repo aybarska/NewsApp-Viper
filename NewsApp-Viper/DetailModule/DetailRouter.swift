@@ -11,22 +11,6 @@ import UIKit
 
 class DetailRouter: PresenterToRouterDetailProtocol {
     
-    // MARK: Static methods
-//    static func createModule() -> UIViewController {
-//
-//        let viewController = DetailViewController()
-//
-//        let presenter: ViewToPresenterDetailProtocol & InteractorToPresenterDetailProtocol = DetailPresenter()
-//
-//        viewController.presenter = presenter
-//        viewController.presenter?.router = DetailRouter()
-//        viewController.presenter?.view = viewController
-//        viewController.presenter?.interactor = DetailInteractor()
-//        viewController.presenter?.interactor?.presenter = presenter
-//
-//        return viewController
-//    }
-    
     static func execModule(ref: DetailViewController) {
         let presenter = DetailPresenter()
         //View

@@ -23,7 +23,6 @@ class BookmarksViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("b load")
         BookmarksPresenter?.didViewLoad()
      }
 
